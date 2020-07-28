@@ -1,0 +1,312 @@
+\PassOptionsToPackage{unicode=true}{hyperref} % options for packages loaded elsewhere
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[9pt,ignorenonframetext,]{beamer}
+\IfFileExists{pgfpages.sty}{\usepackage{pgfpages}}{}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption label separator}{: }
+\setbeamercolor{caption name}{fg=normal text.fg}
+\beamertemplatenavigationsymbolsempty
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+\fi
+\defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+
+
+
+
+
+
+
+\fi
+
+  \usetheme[]{metropolis}
+
+
+
+
+
+
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+  \usepackage{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+
+
+\newif\ifbibliography
+  \usepackage[style=abnt,]{biblatex}
+      \addbibresource{citations.bib}
+  
+
+\hypersetup{
+      pdftitle={Geoinformação na SPU/SC},
+        pdfauthor={Luiz Fernando Palin Droubi},
+          pdfborder={0 0 0},
+    breaklinks=true}
+%\urlstyle{same}  % Use monospace font for urls
+
+
+
+
+
+
+
+% Prevent slide breaks in the middle of a paragraph:
+\widowpenalties 1 10000
+\raggedbottom
+
+  \AtBeginPart{
+    \let\insertpartnumber\relax
+    \let\partname\relax
+    \frame{\partpage}
+  }
+  \AtBeginSection{
+    \ifbibliography
+    \else
+      \let\insertsectionnumber\relax
+      \let\sectionname\relax
+      \frame{\sectionpage}
+    \fi
+  }
+  \AtBeginSubsection{
+    \let\insertsubsectionnumber\relax
+    \let\subsectionname\relax
+    \frame{\subsectionpage}
+  }
+
+
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+  \setcounter{secnumdepth}{0}
+
+
+  \usepackage[brazil]{babel}
+  \usepackage{csquotes}
+
+  \title[]{Geoinformação na SPU/SC}
+
+  \subtitle{um curso prático}
+
+  \author[
+        Luiz Fernando Palin Droubi
+    ]{Luiz Fernando Palin Droubi}
+
+  \institute[
+    ]{
+    Superintendência do Patrimônio da União em Santa Catarina
+    }
+
+\date[
+      \today
+  ]{
+      \today
+        }
+
+\begin{document}
+
+% Hide progress bar and footline on titlepage
+  \begin{frame}[plain]
+  \titlepage
+  \end{frame}
+
+
+  \begin{frame}
+  \tableofcontents[hideallsubsections]
+  \end{frame}
+
+\hypertarget{infraestrutura-nacional-de-dados-espaciais-inde}{%
+\section{Infraestrutura Nacional de Dados Espaciais
+(INDE)}\label{infraestrutura-nacional-de-dados-espaciais-inde}}
+
+\begin{frame}{A IDE}
+\protect\hypertarget{a-ide}{}
+
+\begin{itemize}[<+->]
+\tightlist
+\item
+  Desde a década de 90 cada país tem implementado uma IDE
+
+  \begin{itemize}[<+->]
+  \tightlist
+  \item
+    Argentina: \href{https://www.idera.gob.ar/}{IDERA}
+  \item
+    Uruguay:
+    \href{https://www.gub.uy/infraestructura-datos-espaciales/}{IDEuy}
+  \item
+    Brasil: \href{https://www.inde.gov.br/}{INDE}
+  \end{itemize}
+\item
+  Agenda 21 (UNCED)
+
+  \begin{itemize}[<+->]
+  \tightlist
+  \item
+    Em muitas áreas, a qualidade dos dados não é adequada
+  \item
+    Mesmo onde existem dados com qualidade, havia restrições de acesso
+  \item
+    Falta de padronização
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Objetivos de uma IDE}
+\protect\hypertarget{objetivos-de-uma-ide}{}
+
+Segundo o Plano de Ação da INDE:
+
+\begin{itemize}[<+->]
+\tightlist
+\item
+  Compartilhar IG (informação geográfica);
+\item
+  Incrementar a administração eletrônica no setor público;
+\item
+  Garantir aos cidadãos os direitos de acesso à IG pública para a tomada
+  de decisões;
+\item
+  Incorporar a IG produzida pela iniciativa privada;
+\item
+  Harmonizar a IG disponibilizada, bem como registrar as características
+  dessa IG;
+\item
+  Subsidiar a tomada de decisões de forma mais eficiente e eficaz.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Componentes de uma IDE}
+\protect\hypertarget{componentes-de-uma-ide}{}
+
+\begin{figure}[H]
+
+{\centering \includegraphics[width=0.7\linewidth]{Figura-2-Componentes-principais-de-uma-IDE_W640} 
+
+}
+
+\caption{Componentes de uma IDE. Fonte: \textcite{IDEM}.}\label{fig:unnamed-chunk-1}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}{A INDE}
+\protect\hypertarget{a-inde}{}
+
+\begin{itemize}[<+->]
+\tightlist
+\item
+  Marco legal da INDE: Decreto 6.666/08
+\end{itemize}
+
+\begin{itemize}[<+->]
+\tightlist
+\item
+  Definição:
+\end{itemize}
+
+\begin{quote}
+conjunto integrado de tecnologias; políticas; mecanismos e procedimentos
+de coordenação e monitoramento; padrões e acordos, necessário para
+facilitar e ordenar a geração, o armazenamento, o acesso, o
+compartilhamento, a disseminação e o uso dos dados geoespaciais de
+origem federal, estadual, distrital e municipal \autocite{INDE}.
+\end{quote}
+
+\end{frame}
+
+\begin{frame}{Quem integra a INDE?}
+\protect\hypertarget{quem-integra-a-inde}{}
+
+\begin{center}\includegraphics[width=0.7\linewidth]{Compenentes_INDE_2} \end{center}
+
+\end{frame}
+
+\begin{frame}{Visualização dos dados}
+\protect\hypertarget{visualizauxe7uxe3o-dos-dados}{}
+
+\begin{figure}[H]
+
+{\centering \includegraphics[width=0.7\linewidth]{Figura-4-Exemplo-da-organizacao-dos-temas-de-uma-IDEM_W640} 
+
+}
+
+\caption{Organização temática (IDEM). Fonte: \textcite{IDEM}.}\label{fig:unnamed-chunk-3}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}{Visualização dos dados (2)}
+\protect\hypertarget{visualizauxe7uxe3o-dos-dados-2}{}
+
+\begin{itemize}[<+->]
+\tightlist
+\item
+  Geovisualizadores
+
+  \begin{itemize}[<+->]
+  \tightlist
+  \item
+    \href{https://visualizador.inde.gov.br/}{INDE}
+  \item
+    \href{https://mapa.idera.gob.ar/}{IDERA}
+  \item
+    \href{https://www.gub.uy/infraestructura-datos-espaciales/publico/visualizador}{IDEuy}
+  \item
+    \href{http://www.catastro.cl/}{Chile (bens nacionais)}
+  \item
+    \href{https://idecor.cba.gov.ar/}{IDECor}
+  \item
+    \href{http://www.idesp.sp.gov.br/Visualizador}{IDE-SP}
+  \item
+    IDE-SPU?
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Desafio SPU}
+\protect\hypertarget{desafio-spu}{}
+
+\begin{figure}[H]
+
+{\centering \includegraphics[width=0.7\linewidth]{Figura-3-Combinacao-entre-os-sistemas-de-gerenciamento-terrestre-e-marinho_W640} 
+
+}
+
+\caption{Combinação entre sistemas terrestre e marinho. Fonte: \textcite{IDEM}.}\label{fig:unnamed-chunk-4}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}{Mapa Conceitual SPUViz}
+\protect\hypertarget{mapa-conceitual-spuviz}{}
+
+\end{frame}
+
+
+  \begin{frame}[allowframebreaks]{}
+  \bibliographytrue
+  \printbibliography[heading=none]
+  \end{frame}
+
+
+\end{document}

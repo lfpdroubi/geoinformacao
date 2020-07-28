@@ -1,0 +1,11 @@
+\frametitle{Componentes de uma IDE}
+\protect\hypertarget{componentes-de-uma-ide}{}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{knitr}\OperatorTok{::}\KeywordTok{include_graphics}\NormalTok{(}\StringTok{"Figura-2-Componentes-principais-de-uma-IDE_W640.jpg"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics[width=8.89in]{Figura-2-Componentes-principais-de-uma-IDE_W640}
+
