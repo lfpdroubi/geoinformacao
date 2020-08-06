@@ -1,4 +1,10 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \babel@toc {brazil}{}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {1}{Infraestrutura Nacional de Dados Espaciais (INDE)}{3}{0}{1}
+\beamer@sectionintoc {1}{Infraestrutura de Dados Espaciais (IDE)}{3}{0}{1}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {2}{Infraestrutura de Dados Espaciais no Brasil (INDE)}{19}{0}{2}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {3}{WebGIS}{24}{0}{3}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {4}{SPUViz}{34}{0}{4}
