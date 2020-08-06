@@ -5,6 +5,12 @@
 \defcounter {refsection}{0}\relax 
 \beamer@sectionintoc {2}{Infraestrutura de Dados Espaciais no Brasil (INDE)}{19}{0}{2}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {3}{WebGIS}{24}{0}{3}
+\beamer@sectionintoc {3}{Armazenamento de Informações Geográficas}{24}{0}{3}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {4}{SPUViz}{34}{0}{4}
+\beamer@sectionintoc {4}{Sistemas de Referência}{25}{0}{4}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {5}{Projeções}{35}{0}{5}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {6}{WebGIS}{41}{0}{6}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {7}{SPUViz}{51}{0}{7}

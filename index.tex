@@ -119,7 +119,6 @@
       \today
         }
 
-
 \begin{document}
 
 % Hide progress bar and footline on titlepage
@@ -200,7 +199,7 @@ Segundo \textcite{INDE}:
 
 \begin{figure}[H]
 
-{\centering \includegraphics[width=0.7\linewidth]{Figura-2-Componentes-principais-de-uma-IDE_W640} 
+{\centering \includegraphics[width=0.7\linewidth]{images/Figura-2-Componentes-principais-de-uma-IDE_W640} 
 
 }
 
@@ -236,7 +235,7 @@ origem federal, estadual, distrital e municipal \autocite{INDE}.
 \begin{frame}{Componentes da INDE}
 \protect\hypertarget{componentes-da-inde}{}
 
-\begin{center}\includegraphics[width=0.7\linewidth]{Compenentes_INDE_2} \end{center}
+\begin{center}\includegraphics[width=0.7\linewidth]{images/Compenentes_INDE_2} \end{center}
 
 \end{frame}
 
@@ -251,7 +250,7 @@ origem federal, estadual, distrital e municipal \autocite{INDE}.
 
 \begin{figure}[H]
 
-{\centering \includegraphics[width=0.7\linewidth]{Figura-4-Exemplo-da-organizacao-dos-temas-de-uma-IDEM_W640} 
+{\centering \includegraphics[width=0.7\linewidth]{images/Figura-4-Exemplo-da-organizacao-dos-temas-de-uma-IDEM_W640} 
 
 }
 
@@ -265,12 +264,174 @@ origem federal, estadual, distrital e municipal \autocite{INDE}.
 
 \begin{figure}[H]
 
-{\centering \includegraphics[width=0.7\linewidth]{Figura-3-Combinacao-entre-os-sistemas-de-gerenciamento-terrestre-e-marinho_W640} 
+{\centering \includegraphics[width=0.7\linewidth]{images/Figura-3-Combinacao-entre-os-sistemas-de-gerenciamento-terrestre-e-marinho_W640} 
 
 }
 
 \caption{Combinação entre sistemas terrestre e marinho. Fonte: \textcite{IDEM}.}\label{fig:unnamed-chunk-4}
 \end{figure}
+
+\end{frame}
+
+\hypertarget{armazenamento-de-informauxe7uxf5es-geogruxe1ficas}{%
+\section{Armazenamento de Informações
+Geográficas}\label{armazenamento-de-informauxe7uxf5es-geogruxe1ficas}}
+
+\hypertarget{sistemas-de-referuxeancia}{%
+\section{Sistemas de Referência}\label{sistemas-de-referuxeancia}}
+
+\begin{frame}{A terra não é redonda}
+\protect\hypertarget{a-terra-nuxe3o-uxe9-redonda}{}
+
+\begin{block}{Geóide}
+
+\begin{figure}[H]
+
+{\centering \includegraphics[width=0.65\linewidth]{images/geoide} 
+
+}
+
+\caption{Geóide.}\label{fig:unnamed-chunk-5}
+\end{figure}
+
+\end{block}
+
+\end{frame}
+
+\begin{frame}{A terra não é redonda}
+\protect\hypertarget{a-terra-nuxe3o-uxe9-redonda-1}{}
+
+\begin{block}{Elipsóide}
+
+\begin{figure}[H]
+
+{\centering \includegraphics[width=0.7\linewidth]{images/elipsoide} 
+
+}
+
+\caption{Parâmetros de um elipsóide.}\label{fig:unnamed-chunk-6}
+\end{figure}
+
+O elipsoide é uma superfície que tem um modelo muito mais simples que o
+geóide, e pode ser definida por um número bem menor de parâmetros.
+
+\end{block}
+
+\end{frame}
+
+\begin{frame}[t]{Sistemas de referência ou \emph{datum}}
+\protect\hypertarget{sistemas-de-referuxeancia-ou-datum}{}
+
+\begin{itemize}[<+->]
+\tightlist
+\item
+  Importância da adoção de um \emph{datum}
+\end{itemize}
+
+\begin{figure}[H]
+
+{\centering \includegraphics[width=0.5\linewidth]{images/nbr-14.166-datum-elipsoide-1024x668} 
+
+}
+
+\caption{Amarração entre as superfícies.}\label{fig:unnamed-chunk-7}
+\end{figure}
+
+\begin{itemize}[<+->]
+\tightlist
+\item
+  São compostos de:
+
+  \begin{itemize}[<+->]
+  \tightlist
+  \item
+    Um ponto de amarração
+  \item
+    Um norte (orientação)
+  \item
+    Um elipsóide
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Ilustração}
+\protect\hypertarget{ilustrauxe7uxe3o}{}
+
+\begin{figure}[H]
+
+{\centering \includegraphics[width=0.7\linewidth]{images/sistema-de-referencia} 
+
+}
+
+\caption{Sistemas de Referências global e local.}\label{fig:unnamed-chunk-8}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}{SAD-69 vs.~SIRGAS2000}
+\protect\hypertarget{sad-69-vs.-sirgas2000}{}
+
+\begin{figure}[H]
+
+{\centering \includegraphics[width=0.7\linewidth]{images/sad-69-e-sirgas-WGS-84} 
+
+}
+
+\caption{Diferença entre o elipsóide do SIRGAS2000 e do SAD-69}\label{fig:unnamed-chunk-9}
+\end{figure}
+
+\end{frame}
+
+\hypertarget{projeuxe7uxf5es}{%
+\section{Projeções}\label{projeuxe7uxf5es}}
+
+\begin{frame}[plain]{Projeções}
+\protect\hypertarget{projeuxe7uxf5es-1}{}
+
+\begin{figure}[H]
+
+{\centering \includegraphics[width=1\linewidth]{images/projecoes} 
+
+}
+
+\caption{Projeções cartográficas.}\label{fig:unnamed-chunk-10}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}{Na prática}
+\protect\hypertarget{na-pruxe1tica}{}
+
+\begin{itemize}[<+->]
+\tightlist
+\item
+  Código EPSG é atribuído a cada SRS.
+\end{itemize}
+
+\begin{itemize}[<+->]
+\tightlist
+\item
+  Com as chegadas dos WebMapas 3D, projeções cartográficas praticamente
+  perdem o sentido.
+\end{itemize}
+
+\begin{itemize}[<+->]
+\tightlist
+\item
+  Mesmo nos WebMapas 2D atuais, já existe um padrão, que é a utilização
+  da projeção Spherical Mercator
+  (\href{http://epsg.io/3857}{EPSG:3857}).
+\end{itemize}
+
+\begin{itemize}[<+->]
+\tightlist
+\item
+  Os dados são armazenados \emph{prioritariamente} em WGS-84
+  (\href{http://epsg.io/4326}{EPSG:4326}), o padrão do formato
+  \emph{geojson}, que tem se consolidado como um dos formatos mais
+  utilizados, devido ao avança dos webmapas.
+\end{itemize}
 
 \end{frame}
 
@@ -280,11 +441,18 @@ origem federal, estadual, distrital e municipal \autocite{INDE}.
 \begin{frame}{Tecnologias}
 \protect\hypertarget{tecnologias}{}
 
-\begin{center}\includegraphics[width=0.7\linewidth]{GeoServer_GeoNetwork_with_web_app.svg} \end{center}
+\begin{figure}[H]
+
+{\centering \includegraphics[width=0.7\linewidth]{images/GeoServer_GeoNetwork_with_web_app.svg} 
+
+}
+
+\caption{Tecnologia para confecção de WebMapas.}\label{fig:unnamed-chunk-11}
+\end{figure}
 
 \end{frame}
 
-\begin{frame}{Visualizadores de dados espaciais}
+\begin{frame}[t]{Visualizadores de dados espaciais}
 \protect\hypertarget{visualizadores-de-dados-espaciais}{}
 
 \begin{itemize}[<+->]
@@ -316,17 +484,31 @@ origem federal, estadual, distrital e municipal \autocite{INDE}.
 \hypertarget{spuviz}{%
 \section{SPUViz}\label{spuviz}}
 
-\begin{frame}{Mapa Conceitual SPUViz}
-\protect\hypertarget{mapa-conceitual-spuviz}{}
+\begin{frame}{SPUViz}
+\protect\hypertarget{spuviz-1}{}
 
-\begin{center}\includegraphics[width=0.7\linewidth]{modeloConceitual} \end{center}
+\begin{figure}[H]
+
+{\centering \includegraphics[width=0.8\linewidth]{images/modeloConceitual} 
+
+}
+
+\caption{Modelo Conceitual - Atual}\label{fig:unnamed-chunk-12}
+\end{figure}
 
 \end{frame}
 
-\begin{frame}{Mapa Conceitual SPUViz (futuro)}
-\protect\hypertarget{mapa-conceitual-spuviz-futuro}{}
+\begin{frame}{SPUViz (futuro)}
+\protect\hypertarget{spuviz-futuro}{}
 
-\begin{center}\includegraphics[width=0.7\linewidth]{modeloConceitual_Futuro} \end{center}
+\begin{figure}[H]
+
+{\centering \includegraphics[width=0.6\linewidth]{images/modeloConceitual_Futuro} 
+
+}
+
+\caption{Modelo Conceitual - Projetado}\label{fig:unnamed-chunk-13}
+\end{figure}
 
 \end{frame}
 

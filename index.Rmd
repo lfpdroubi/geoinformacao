@@ -46,17 +46,17 @@ knitr::knit_hooks$set(mysize = function(before, options, envir) {
 
 Segundo @INDE:
 
->- Compartilhar IG (informação geográfica);
->- Incrementar a administração eletrônica no setor público;
->- Garantir aos cidadãos os direitos de acesso à IG pública para a tomada de decisões;
->- Incorporar a IG produzida pela iniciativa privada;
->- Harmonizar a IG disponibilizada, bem como registrar as características dessa IG;
->- Subsidiar a tomada de decisões de forma mais eficiente e eficaz. 
+> - Compartilhar IG (informação geográfica);
+> - Incrementar a administração eletrônica no setor público;
+> - Garantir aos cidadãos os direitos de acesso à IG pública para a tomada de decisões;
+> - Incorporar a IG produzida pela iniciativa privada;
+> - Harmonizar a IG disponibilizada, bem como registrar as características dessa IG;
+> - Subsidiar a tomada de decisões de forma mais eficiente e eficaz. 
 
 ## Componentes de uma IDE
 
 ```{r, fig.cap="Componentes de uma IDE. Fonte: \\textcite{IDEM}."}
-knitr::include_graphics("Figura-2-Componentes-principais-de-uma-IDE_W640.jpg")
+knitr::include_graphics("images/Figura-2-Componentes-principais-de-uma-IDE_W640.jpg")
 ```
 
 # Infraestrutura de Dados Espaciais no Brasil (INDE)
@@ -76,7 +76,7 @@ municipal [@INDE].
 ## Componentes da INDE
 
 ```{r}
-knitr::include_graphics("Compenentes_INDE_2.jpg")
+knitr::include_graphics("images/Compenentes_INDE_2.jpg")
 ```
 
 ## INDEM?
@@ -84,25 +84,97 @@ knitr::include_graphics("Compenentes_INDE_2.jpg")
 >- \textcite{IDEM}
 
 ```{r, fig.cap="Organização temática (IDEM). Fonte: \\textcite{IDEM}."}
-knitr::include_graphics("Figura-4-Exemplo-da-organizacao-dos-temas-de-uma-IDEM_W640.jpg")
+knitr::include_graphics("images/Figura-4-Exemplo-da-organizacao-dos-temas-de-uma-IDEM_W640.jpg")
 ```
 
 ## Desafio SPU
 
 ```{r, fig.cap="Combinação entre sistemas terrestre e marinho. Fonte: \\textcite{IDEM}."}
-knitr::include_graphics("Figura-3-Combinacao-entre-os-sistemas-de-gerenciamento-terrestre-e-marinho_W640.jpg")
+knitr::include_graphics("images/Figura-3-Combinacao-entre-os-sistemas-de-gerenciamento-terrestre-e-marinho_W640.jpg")
 ```
+
+# Armazenamento de Informações Geográficas
+
+# Sistemas de Referência
+
+## A terra não é redonda
+
+### Geóide
+
+```{r, fig.cap = "Geóide.", out.width="65%"}
+knitr::include_graphics("images/geoide.jpg")
+```
+
+## A terra não é redonda
+
+### Elipsóide
+
+```{r, fig.cap="Parâmetros de um elipsóide."}
+knitr::include_graphics("images/elipsoide.jpg")
+```
+
+O elipsoide é uma superfície que tem um modelo muito mais simples que o geóide, 
+e pode ser definida por um número bem menor de parâmetros.
+
+## Sistemas de referência ou *datum* {.t}
+
+>- Importância da adoção de um *datum*
+
+```{r, fig.cap="Amarração entre as superfícies.", out.width="50%"}
+knitr::include_graphics("images/nbr-14.166-datum-elipsoide-1024x668.png")
+```
+
+>- São compostos de:
+>   + Um ponto de amarração
+>   + Um norte (orientação)
+>   + Um elipsóide
+
+## Ilustração
+
+```{r, fig.cap = "Sistemas de Referências global e local."}
+knitr::include_graphics("images/sistema-de-referencia.jpg")
+```
+
+## SAD-69 vs. SIRGAS2000
+
+```{r fig.cap = "Diferença entre o elipsóide do SIRGAS2000 e do SAD-69"}
+knitr::include_graphics("images/sad-69-e-sirgas-WGS-84.jpeg")
+```
+
+# Projeções 
+
+## Projeções {.plain}
+
+```{r, out.width="100%", fig.cap = "Projeções cartográficas."}
+knitr::include_graphics("images/projecoes.jpg")
+```
+
+## Na prática
+
+> - Código EPSG é atribuído a cada SRS.
+
+> - Com as chegadas dos WebMapas 3D, projeções cartográficas praticamente
+perdem o sentido.
+
+> - Mesmo nos WebMapas 2D atuais, já existe um padrão, que é a utilização
+da projeção Spherical Mercator ([EPSG:3857](http://epsg.io/3857)).
+
+> - Os dados são armazenados *prioritariamente* em WGS-84 
+([EPSG:4326](http://epsg.io/4326)), o padrão do formato *geojson*, que tem se 
+consolidado como um dos formatos mais utilizados, devido ao avança dos webmapas.
+
+
 
 # WebGIS
 
 ## Tecnologias
 
-```{r}
-knitr::include_graphics("GeoServer_GeoNetwork_with_web_app.svg.png")
+```{r, fig.cap = "Tecnologia para confecção de WebMapas."}
+knitr::include_graphics("images/GeoServer_GeoNetwork_with_web_app.svg.png")
 ```
 
 
-## Visualizadores de dados espaciais
+## Visualizadores de dados espaciais {.t}
 
 >- Geovisualizadores
 >   + [INDE](https://visualizador.inde.gov.br/)
@@ -115,18 +187,19 @@ knitr::include_graphics("GeoServer_GeoNetwork_with_web_app.svg.png")
 
 # SPUViz
 
-## Mapa Conceitual SPUViz
+## SPUViz
 
-```{r}
-knitr::include_graphics("modeloConceitual.png")
+```{r, fig.cap = "Modelo Conceitual - Atual", out.width="80%"}
+knitr::include_graphics("images/modeloConceitual.png")
 ```
 
-## Mapa Conceitual SPUViz (futuro)
+## SPUViz (futuro)
 
-```{r}
-knitr::include_graphics("modeloConceitual_Futuro.png")
+```{r, fig.cap = "Modelo Conceitual - Projetado", out.width="60%"}
+knitr::include_graphics("images/modeloConceitual_Futuro.png")
 ```
 
 ## Conclusão
 
 \Huge\center \textsc\textbf{Obrigado!}
+
