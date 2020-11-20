@@ -190,13 +190,7 @@ knitr::include_graphics("images/GeoServer_GeoNetwork_with_web_app.svg.png")
 ## SPUViz
 
 ```{r, fig.cap = "Modelo Conceitual - Atual", out.width="80%"}
-knitr::include_graphics("images/modeloConceitual.png")
-```
-
-## SPUViz (futuro)
-
-```{r, fig.cap = "Modelo Conceitual - Projetado", out.width="60%"}
-knitr::include_graphics("images/modeloConceitual_Futuro.png")
+knitr::include_graphics("images/modeloConceitual_1.png")
 ```
 
 ## Conclusão

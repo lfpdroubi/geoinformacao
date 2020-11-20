@@ -1,0 +1,91 @@
+# SPUViz
+
+@startuml
+
+top to bottom direction
+
+actor A as "Servidor SPU/SCS"
+
+actor B as "Produtores de Informação Geográfica"
+
+storage X [
+  Hard Drive
+  ]
+
+package "Web Browser" {
+  [LeafletJS]
+  [Leaflet.Draw Plugin] 
+  [TurfJS]
+  [Leaflet.WMS Plugin]
+  [Leaflet.WFST Plugin]
+  [Leaflet.FileLayer Plugin]
+  [jQuery]
+  }
+
+package github {
+  [SPUData]
+  [SPU-SC-NUPRIV]
+  [SPU-SC-NUDEM]
+  [SPU-SC-NUJUC]
+  }
+
+package Geoserviços {
+  [WMS]
+  [WFS]
+  [WFST]
+  }
+node "4"{
+  database SPU
+}
+node "1" {
+  database IBGE
+}
+node "2" {
+  database ANA
+}
+node "3" {
+  database MP
+}
+node "Municípios"{
+  database CTM_FLN
+  database CTM_Joinville
+  database CTM_...
+  }
+
+jQuery <-- SPUData
+jQuery <-- [SPU-SC-NUPRIV]
+jQuery <-- [SPU-SC-NUDEM]
+jQuery <-- [SPU-SC-NUJUC]
+A --> X
+X --> [Leaflet.FileLayer Plugin]
+X <-- [Leaflet.Draw Plugin]
+[Leaflet.FileLayer Plugin] -- LeafletJS
+WFST <..> SPU
+[Leaflet.WFST Plugin] <..> WFST
+[Leaflet.Draw Plugin] ..> [Leaflet.WFST Plugin]
+LeafletJS <--> [Leaflet.WFST Plugin]
+A <-- LeafletJS
+A --> [Leaflet.Draw Plugin]
+[Leaflet.WMS Plugin] <-- WMS
+WMS <-- IBGE
+WMS <-- ANA
+WMS <-- MP
+WFS <-- IBGE
+WFS <-- ANA
+WFS <-- MP
+WFST <-- CTM_FLN
+WFST <-- CTM_Joinville
+WFST <-- CTM_...
+jQuery <-- WFS
+TurfJS <-- jQuery
+LeafletJS <-- jQuery
+
+LeafletJS <-- [Leaflet.WMS Plugin]
+TurfJS <-- [Leaflet.WFST Plugin]
+LeafletJS -- TurfJS
+IBGE <-- B
+ANA <-- B
+MP <-- B
+
+
+@enduml
